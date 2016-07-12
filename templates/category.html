@@ -1,5 +1,20 @@
-{% extends "index.html" %}
-{% block content_title %}
-<h2>Articles in the {{ category }} category</h2>
-{% endblock %}
+{% extends 'base.html' %}
 
+{% block content %}
+  <div class="mdl-grid">
+    {% for article in articles_page.object_list %}
+      <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col">
+        <div class="mdl-card__title mdl-card--expand">
+            <h2 class="mdl-card__title-text">{{ article.title }}</h2>
+        </div>
+        <div class="mdl-card__media"></div>
+        <div class="mdl-card__supporting-text mdl-card--expand">
+            {{ article.summary }}
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <a href="{{ SITEURL }}/{{ article.url }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Чытаць</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

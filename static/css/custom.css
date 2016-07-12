@@ -1,0 +1,22 @@
+.erepublik-background {
+    background: url(../images/background.png) center / cover;
+}
+
+.erepublik-background .mdl-layout__header,
+.erepublik-background .mdl-layout__drawer-button,
+.erepublik-background .mdl-navigation__link {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: hsl(0, 87%, 0%);
+}
+
+.mdl-grid {
+    max-width: 960px;
+}
+
+.article-content img {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
